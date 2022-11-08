@@ -16,6 +16,13 @@ public class HelloAppApplication {
 		};
 	}
 
+	@Bean
+	public Function<String, String> helloNative() {
+		return (in) -> {
+			return "Hello Native " + in;
+		};
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(HelloAppApplication.class, args);
 	}
